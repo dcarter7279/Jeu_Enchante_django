@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'contact/contact.css' %}">
+<form action="" method="post">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" value="Submit">
+ </form>
+
+<br>
+
+<h2> PACKAGING </h2>
+
+ <p>All of our products are shipped as anonymously as possible. Depending on your order, you might receive a plain brown box or a tan business envelope lined with bubble wrap. 
+	 Because Jeu Enchante is a very recognized name, we use an alias on the return address label to protect your privacy.</p>
+	
+	
+<br>
+<h2> DISCREET BILLING </h2>
+	<p>Our efforts to ensure your privacy even extends to your credit card statement. Our name will never appear in your billing statement. 
+		Instead, your order will be listed simply as Jeu Mail.</p>
+	
+	
+<br>	
+<h2> RETURNS AND EXCHANGES </h2> 
+	<p> Can I return my product or get a refund?
+	At Jeu Enchante we stand behind the products we sell. Due to the nature of our products we do not accept returns or exchanges on items not found to be defective. 
+	If you receive a defective product we will provide a replacement or exchange within 30 days of purchase.
+	
+	We regret that we are unable to refund your original shipping charges, if applicable, unless the return was a result of our error. Gift cards are non-refundable. 
+	
+	Please note: We do not accept returns on products that were not purchased from Jeu Enchante stores or Jeuenchante.com. We do not offer satisfaction returns.</p>
+
+{% endblock %}

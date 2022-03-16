@@ -10,11 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import os
 from pathlib import Path
 from decouple import config
-import django_heroku
-from django.core.management.utils import get_random_secret_key
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -143,14 +140,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# https://docs.djangoproject.com/en/3.1/howto/static-files
 
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    'jeu_enchante/static',
 ]
 
 # media files configuration

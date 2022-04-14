@@ -1,7 +1,6 @@
-from distutils.command.upload import upload
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
-from eth_utils import address
+
 
 
 # Create your models here.

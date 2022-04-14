@@ -1,6 +1,6 @@
 from email import message
 from django.db import models
-from validators import email
+
 
 # Create your models here.
 class Contact(models.Model):
